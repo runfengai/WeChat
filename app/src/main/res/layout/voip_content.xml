@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <AutoCompleteTextView
+        android:id="@+id/sip_account"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="sip账号"
+        android:text="100" />
+
+    <AutoCompleteTextView
+        android:id="@+id/sip_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="sip密码"
+        android:inputType="textPassword"
+        android:text="100" />
+
+    <AutoCompleteTextView
+        android:id="@+id/sip_peeraccount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="对方sip"
+        android:text="101" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="登录SIP服务器" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="来自电话："
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/call_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="接受" />
+
+            <Button
+                android:id="@+id/btn_reject"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="拒绝" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_state"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="状态：" />
+</LinearLayout>
