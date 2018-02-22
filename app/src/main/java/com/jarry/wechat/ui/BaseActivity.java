@@ -11,7 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.jarry.wechat.R;
+
+import java.util.List;
 
 import butterknife.ButterKnife;
 
@@ -33,6 +37,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         self = this;
+//        new Gson().fromJson("", new TypeToken<List<String>>() {
+//        }.getType());
         setContentView(setLayout());
         //注册butterknife
         initData();
